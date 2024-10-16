@@ -45,31 +45,31 @@ The Burger Shop POS system is a full-stack application that facilitates the mana
 The backend will start on http://localhost:8080.
 ### API Endpoints
 ## Customer Endpoints
-GET /api/v1/customer: Retrieve all customers.
-POST /api/v1/customer: Create a new customer.
-PUT /api/v1/customer: Update an existing customer.
-DELETE /api/v1/customer/{id}: Delete a customer by ID.
+- GET /api/v1/customer: Retrieve all customers.
+- POST /api/v1/customer: Create a new customer.
+- PUT /api/v1/customer: Update an existing customer.
+- DELETE /api/v1/customer/{id}: Delete a customer by ID.
 ## Item Endpoints
-GET /api/v1/item: Retrieve all items.
-POST /api/v1/item: Create a new item.
-PUT /api/v1/item: Update an existing item.
-DELETE /api/v1/item/{id}: Delete an item by ID.
+- GET /api/v1/item: Retrieve all items.
+- POST /api/v1/item: Create a new item.
+- PUT /api/v1/item: Update an existing item.
+- DELETE /api/v1/item/{id}: Delete an item by ID.
 ## Order Endpoints
-GET /api/v1/order: Retrieve all orders.
-POST /api/v1/placeOrder: Place a new order.
+- GET /api/v1/order: Retrieve all orders.
+- POST /api/v1/placeOrder: Place a new order.
 ### Usage
 ## Customer Management
-Navigate to the "Customer" section in the frontend.
-Use the form to add, update, or delete customer information.
+- Navigate to the "Customer" section in the frontend.
+- Use the form to add, update, or delete customer information.
 ## Item Management
-Navigate to the "Items" section.
-Manage items using the form to add, update, or delete items.
+- Navigate to the "Items" section.
+- Manage items using the form to add, update, or delete items.
 ## Place Orders
-Go to the "Order" section in the frontend.
-Select a customer and add items to create a new order.
-View Orders
-Visit the "View Orders" section.
-Review all existing orders, including their details and status.
+- Go to the "Order" section in the frontend.
+- Select a customer and add items to create a new order.
+-View Orders
+- Visit the "View Orders" section.
+- Review all existing orders, including their details and status.
 ### API Documentation
 You can find detailed API documentation at the following link:
 
