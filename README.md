@@ -6,6 +6,8 @@ The Burger Shop POS system is a full-stack application that facilitates the mana
 
 ## Technologies Used
 
+![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=plastic&logo=spring&logoColor=white)![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=plastic&logo=openjdk&logoColor=white)![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=plastic&logo=mysql&logoColor=white)![Postman](https://img.shields.io/badge/Postman-FF6C37?style=plastic&logo=postman&logoColor=white)
+
 ### Backend
 - Java 17
 - Spring Framework (Spring Web MVC, Spring Data JPA, Hibernate)
