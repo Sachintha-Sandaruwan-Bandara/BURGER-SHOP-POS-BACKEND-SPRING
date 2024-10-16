@@ -43,7 +43,7 @@ The Burger Shop POS system is a full-stack application that facilitates the mana
 
 ## Run the application
 The backend will start on http://localhost:8080.
-### API Endpoints
+# API Endpoints
 ## Customer Endpoints
 - GET /api/v1/customer: Retrieve all customers.
 - POST /api/v1/customer: Create a new customer.
@@ -70,7 +70,7 @@ The backend will start on http://localhost:8080.
 -View Orders
 - Visit the "View Orders" section.
 - Review all existing orders, including their details and status.
-### API Documentation
+# API Documentation
 You can find detailed API documentation at the following link:
 
 https://documenter.getpostman.com/view/34708061/2sAXxV6A19
