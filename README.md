@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Burger Shop POS system is a full-stack application that facilitates the management of customers, items, and orders for a burger shop. The backend is built with Java, Spring, and MySQL, while the frontend is developed using HTML, CSS, and JavaScript. It enables users to perform CRUD operations on customers and items, place orders, and view order details.
+The Burger Shop POS system is a full-stack application that facilitates the management of customers, items, and orders for a burger shop. The backend is built with Java, Spring, and MySQL. It enables users to perform CRUD operations on customers and items, place orders, and view order details.
 
 ## Technologies Used
 
