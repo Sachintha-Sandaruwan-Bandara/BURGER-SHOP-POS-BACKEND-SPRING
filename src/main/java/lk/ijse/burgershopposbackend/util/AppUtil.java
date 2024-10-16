@@ -1,4 +1,4 @@
-package lk.ijse.burgershopposbackend.service.impl;
+package lk.ijse.burgershopposbackend.util;
 /* 
     @author 
       
@@ -11,8 +11,20 @@ package lk.ijse.burgershopposbackend.service.impl;
 \__ \    / _ \    | (__  | __ |  | |     \__ \     | _ \   / _ \   | .` |  | |) |   / _ \   |   /    / _ \   
 |___/   /_/ \_\    \___| |_||_| |___|    |___/     |___/  /_/ \_\  |_|\_|  |___/   /_/ \_\  |_|_\   /_/ \_\  
   
- @created 10/12/2024 - 9:53 PM 
+ @created 10/15/2024 - 3:32 PM 
 */
 
-public class ItemServiceImpl {
+import java.util.Base64;
+import java.util.UUID;
+
+public class AppUtil {
+
+    public static String createCustomerId(){
+        return "CUSTOMER-"+UUID.randomUUID();
+    }
+
+    public static String toBase64ProfilePic(byte [] profilePic){
+        return Base64.getEncoder().encodeToString(profilePic);
+    }
+
 }

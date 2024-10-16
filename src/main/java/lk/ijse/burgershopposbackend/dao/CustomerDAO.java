@@ -11,8 +11,12 @@ package lk.ijse.burgershopposbackend.dao;
 \__ \    / _ \    | (__  | __ |  | |     \__ \     | _ \   / _ \   | .` |  | |) |   / _ \   |   /    / _ \   
 |___/   /_/ \_\    \___| |_||_| |___|    |___/     |___/  /_/ \_\  |_|\_|  |___/   /_/ \_\  |_|_\   /_/ \_\  
   
- @created 10/12/2024 - 9:42 PM 
+ @created 10/15/2024 - 3:53 PM 
 */
 
-public class CustomerDAO {
+import lk.ijse.burgershopposbackend.entity.CustomerEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CustomerDAO extends JpaRepository<CustomerEntity,String> {
+    CustomerEntity getCustomerEntitiesByCustomerId (String customerId);
 }

@@ -1,4 +1,4 @@
-package lk.ijse.burgershopposbackend.entity;
+package lk.ijse.burgershopposbackend.customObj;
 /* 
     @author 
       
@@ -11,8 +11,8 @@ package lk.ijse.burgershopposbackend.entity;
 \__ \    / _ \    | (__  | __ |  | |     \__ \     | _ \   / _ \   | .` |  | |) |   / _ \   |   /    / _ \   
 |___/   /_/ \_\    \___| |_||_| |___|    |___/     |___/  /_/ \_\  |_|\_|  |___/   /_/ \_\  |_|_\   /_/ \_\  
   
- @created 10/12/2024 - 9:46 PM 
+ @created 10/15/2024 - 10:16 AM 
 */
 
-public class ItemEntity {
+public interface CustomerResponse {
 }

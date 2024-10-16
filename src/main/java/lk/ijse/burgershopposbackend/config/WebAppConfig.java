@@ -17,6 +17,9 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
         fileSizeThreshold = 1024 * 1024 * 2,//2mb
         maxFileSize = 1024 * 1024 * 10,     //10mb
         maxRequestSize =1024 * 1024 * 50    //50mb
+
 )
 public class WebAppConfig {
+
+
 }

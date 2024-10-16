@@ -14,5 +14,15 @@ package lk.ijse.burgershopposbackend.service;
  @created 10/12/2024 - 9:51 PM 
 */
 
+import lk.ijse.burgershopposbackend.customObj.CustomerResponse;
+import lk.ijse.burgershopposbackend.dto.CustomerDTO;
+
+import java.util.List;
+
 public interface CustomerService {
+    void saveCustomer(CustomerDTO customerDTO);
+    void updateCustomer(CustomerDTO customerDTO);
+    void deleteCustomer(String customerId);
+    CustomerResponse getSelectedCustomer(String customerId);
+    List<CustomerDTO> getAllCustomers();
 }
