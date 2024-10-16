@@ -77,6 +77,6 @@ You can find detailed API documentation at the following link:
 
 This documentation provides information about each API endpoint, including request parameters and sample responses.
 
-##License
-MIT License
-© 2024 - Present | Sachintha Sandaruwan | All Rights Reserved
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
