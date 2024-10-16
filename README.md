@@ -73,7 +73,7 @@ The backend will start on http://localhost:8080.
 # API Documentation
 You can find detailed API documentation at the following link:
 
-https://documenter.getpostman.com/view/34708061/2sAXxV6A19
+<a href="https://documenter.getpostman.com/view/34708061/2sAXxV6A19" target="_blank">API Documentation</a>
 
 This documentation provides information about each API endpoint, including request parameters and sample responses.
 
