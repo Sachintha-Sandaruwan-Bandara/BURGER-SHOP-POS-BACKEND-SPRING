@@ -78,5 +78,6 @@ You can find detailed API documentation at the following link:
 This documentation provides information about each API endpoint, including request parameters and sample responses.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+<a href="https://documenter.getpostman.com/view/34708061/2sAXxV6A19" target="_blank">MIT License</a>
+© 2024 - Present | Sachintha Sandaruwan | All Rights Reserved
 
