@@ -39,38 +39,38 @@ The Burger Shop POS system is a full-stack application that facilitates the mana
 1. Clone the repository:
    ```bash
    git clone https://github.com/Sachintha-Sandaruwan-Bandara/BURGER-SHOP-POS-BACKEND-SPRING.git
-##Navigate to the backend directory:
+## Navigate to the backend directory:
 
-##Run the application
+## Run the application
 The backend will start on http://localhost:8080.
-###API Endpoints
-##Customer Endpoints
+### API Endpoints
+## Customer Endpoints
 GET /api/v1/customer: Retrieve all customers.
 POST /api/v1/customer: Create a new customer.
 PUT /api/v1/customer: Update an existing customer.
 DELETE /api/v1/customer/{id}: Delete a customer by ID.
-##Item Endpoints
+## Item Endpoints
 GET /api/v1/item: Retrieve all items.
 POST /api/v1/item: Create a new item.
 PUT /api/v1/item: Update an existing item.
 DELETE /api/v1/item/{id}: Delete an item by ID.
-##Order Endpoints
+## Order Endpoints
 GET /api/v1/order: Retrieve all orders.
 POST /api/v1/placeOrder: Place a new order.
-###Usage
-##Customer Management
+### Usage
+## Customer Management
 Navigate to the "Customer" section in the frontend.
 Use the form to add, update, or delete customer information.
-##Item Management
+## Item Management
 Navigate to the "Items" section.
 Manage items using the form to add, update, or delete items.
-##Place Orders
+## Place Orders
 Go to the "Order" section in the frontend.
 Select a customer and add items to create a new order.
 View Orders
 Visit the "View Orders" section.
 Review all existing orders, including their details and status.
-###API Documentation
+### API Documentation
 You can find detailed API documentation at the following link:
 
 https://documenter.getpostman.com/view/34708061/2sAXxV6A19
