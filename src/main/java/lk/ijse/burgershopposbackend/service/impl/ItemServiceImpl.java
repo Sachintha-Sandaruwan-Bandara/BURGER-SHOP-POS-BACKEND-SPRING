@@ -11,18 +11,23 @@ package lk.ijse.burgershopposbackend.service.impl;
 \__ \    / _ \    | (__  | __ |  | |     \__ \     | _ \   / _ \   | .` |  | |) |   / _ \   |   /    / _ \   
 |___/   /_/ \_\    \___| |_||_| |___|    |___/     |___/  /_/ \_\  |_|\_|  |___/   /_/ \_\  |_|_\   /_/ \_\  
   
- @created 10/12/2024 - 9:52 PM 
+ @created 10/16/2024 - 2:52 PM 
 */
 
 import jakarta.transaction.Transactional;
 import lk.ijse.burgershopposbackend.customObj.CustomerErrorResponse;
 import lk.ijse.burgershopposbackend.customObj.CustomerResponse;
+import lk.ijse.burgershopposbackend.customObj.ItemErrorResponse;
+import lk.ijse.burgershopposbackend.customObj.ItemResponse;
 import lk.ijse.burgershopposbackend.dao.CustomerDAO;
+import lk.ijse.burgershopposbackend.dao.ItemDAO;
 import lk.ijse.burgershopposbackend.dto.CustomerDTO;
+import lk.ijse.burgershopposbackend.dto.ItemDTO;
 import lk.ijse.burgershopposbackend.entity.CustomerEntity;
+import lk.ijse.burgershopposbackend.entity.ItemEntity;
 import lk.ijse.burgershopposbackend.exception.CustomerNotFoundException;
 import lk.ijse.burgershopposbackend.exception.DataPersistFailedException;
-import lk.ijse.burgershopposbackend.service.CustomerService;
+import lk.ijse.burgershopposbackend.service.ItemService;
 import lk.ijse.burgershopposbackend.util.AppUtil;
 import lk.ijse.burgershopposbackend.util.Mapping;
 import lombok.RequiredArgsConstructor;
@@ -35,19 +40,19 @@ import java.util.Optional;
 @Service
 @Transactional
 @RequiredArgsConstructor
-public class CustomerServiceImpl implements CustomerService{
+public class ItemServiceImpl implements ItemService {
     @Autowired
-    private final CustomerDAO customerDAO;
+    private final ItemDAO itemDAO;
 
     @Autowired
     private final Mapping mapping;
 
     @Override
-    public void saveCustomer(CustomerDTO customerDTO) {
-        customerDTO.setCustomerId(AppUtil.createCustomerId());
-        CustomerEntity saveCustomer=
-                customerDAO.save(mapping.convertToEntity(customerDTO));
-        if(saveCustomer == null && saveCustomer.getCustomerId() == null ) {
+    public void saveItem(ItemDTO itemDTO) {
+        itemDTO.setItemCode(AppUtil.createItemCode());
+        ItemEntity saveItem=
+                itemDAO.save(mapping.convertToEntity(itemDTO));
+        if(saveItem == null && saveItem.getItemCode() == null ) {
             throw new DataPersistFailedException("Cannot data saved");
         }
     }
@@ -55,46 +60,46 @@ public class CustomerServiceImpl implements CustomerService{
 
 
     @Override
-    public void deleteCustomer(String customerId) {
-        Optional<CustomerEntity> selectedCustomerId = customerDAO.findById(customerId);
-        if (!selectedCustomerId.isPresent()) {
+    public void deleteItem(String itemCode) {
+        Optional<ItemEntity> selectedItemCode = itemDAO.findById(itemCode);
+        if (!selectedItemCode.isPresent()) {
             throw new CustomerNotFoundException("User not found");
         } else {
-            customerDAO.deleteById(customerId);
+            itemDAO.deleteById(itemCode);
         }
     }
 
     @Override
-    public CustomerResponse getSelectedCustomer(String customerId) {
+    public ItemResponse getSelectedItem(String itemCode) {
 
-        if (customerDAO.existsById(customerId)) {
-            CustomerEntity customerEntityByCustomerId = customerDAO.getCustomerEntitiesByCustomerId(customerId);
-            return mapping.convertToDTO(customerEntityByCustomerId);
+        if (itemDAO.existsById(itemCode)) {
+            ItemEntity itemEntityByItemCode = itemDAO.getItemEntityByItemCode(itemCode);
+            return mapping.convertToDTO(itemEntityByItemCode);
         }else {
-            return new CustomerErrorResponse(0,"User Not Found");
+            return new ItemErrorResponse(0,"item Not Found");
         }    }
 
     @Override
-    public List<CustomerDTO> getAllCustomers() {
+    public List<ItemDTO> getAllItems() {
 
-        return mapping.convertCustomerToDTOList(customerDAO.findAll());
+        return mapping.convertItemToDTOList(itemDAO.findAll());
     }
 
     @Override
-    public void updateCustomer( CustomerDTO customerDTO) {
-        Optional<CustomerEntity> tempCustomer = customerDAO.findById(customerDTO.getCustomerId());
-        if (!tempCustomer.isPresent()) {
+    public void updateItem( ItemDTO itemDTO) {
+        Optional<ItemEntity> tempItem = itemDAO.findById(itemDTO.getItemCode());
+        if (!tempItem.isPresent()) {
 
-            throw new CustomerNotFoundException("User Not Found");
+            throw new CustomerNotFoundException("item Not Found");
 
 
 
         } else {
 
-            tempCustomer.get().setName(customerDTO.getName());
-            tempCustomer.get().setAddress(customerDTO.getAddress());
-            tempCustomer.get().setSalary(customerDTO.getSalary());
-            tempCustomer.get().setProfilePic(customerDTO.getProfilePic());
+            tempItem.get().setName(itemDTO.getName());
+            tempItem.get().setQty(itemDTO.getQty());
+            tempItem.get().setUnitPrice(itemDTO.getUnitPrice());
+            tempItem.get().setImage(itemDTO.getImage());
 
         }
     }

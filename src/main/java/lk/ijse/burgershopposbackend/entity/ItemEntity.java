@@ -1,5 +1,14 @@
-package lk.ijse.burgershopposbackend.util;
-/* 
+package lk.ijse.burgershopposbackend.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+/*
     @author 
       
  (                           )   (        (                            )   (                 (               
@@ -11,23 +20,19 @@ package lk.ijse.burgershopposbackend.util;
 \__ \    / _ \    | (__  | __ |  | |     \__ \     | _ \   / _ \   | .` |  | |) |   / _ \   |   /    / _ \   
 |___/   /_/ \_\    \___| |_||_| |___|    |___/     |___/  /_/ \_\  |_|\_|  |___/   /_/ \_\  |_|_\   /_/ \_\  
   
- @created 10/15/2024 - 3:32 PM 
+ @created 10/16/2024 - 2:50 PM 
 */
-
-import java.util.Base64;
-import java.util.UUID;
-
-public class AppUtil {
-
-    public static String createCustomerId(){
-        return "CUSTOMER-"+UUID.randomUUID();
-    }
-    public static String createItemCode(){
-        return "ITEM-"+UUID.randomUUID();
-    }
-
-    public static String toBase64ProfilePic(byte [] profilePic){
-        return Base64.getEncoder().encodeToString(profilePic);
-    }
-
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Entity
+@Table
+public class ItemEntity implements SuperEntity{
+    @Id
+    private String itemCode;
+    private String name;
+    private int qty;
+    private double unitPrice;
+    @Column(columnDefinition = "LONGTEXT")
+    private String image;
 }

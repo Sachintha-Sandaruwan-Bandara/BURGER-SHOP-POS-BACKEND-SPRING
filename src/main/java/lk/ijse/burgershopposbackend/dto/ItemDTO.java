@@ -1,4 +1,4 @@
-package lk.ijse.burgershopposbackend.util;
+package lk.ijse.burgershopposbackend.dto;
 /* 
     @author 
       
@@ -11,23 +11,23 @@ package lk.ijse.burgershopposbackend.util;
 \__ \    / _ \    | (__  | __ |  | |     \__ \     | _ \   / _ \   | .` |  | |) |   / _ \   |   /    / _ \   
 |___/   /_/ \_\    \___| |_||_| |___|    |___/     |___/  /_/ \_\  |_|\_|  |___/   /_/ \_\  |_|_\   /_/ \_\  
   
- @created 10/15/2024 - 3:32 PM 
+ @created 10/16/2024 - 2:49 PM 
 */
 
-import java.util.Base64;
-import java.util.UUID;
+import lk.ijse.burgershopposbackend.customObj.ItemResponse;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-public class AppUtil {
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+public class ItemDTO implements SuperDTO, ItemResponse {
+    private String itemCode;
+    private String name;
+    private int qty;
+    private double unitPrice;
 
-    public static String createCustomerId(){
-        return "CUSTOMER-"+UUID.randomUUID();
-    }
-    public static String createItemCode(){
-        return "ITEM-"+UUID.randomUUID();
-    }
-
-    public static String toBase64ProfilePic(byte [] profilePic){
-        return Base64.getEncoder().encodeToString(profilePic);
-    }
+    private String image;
 
 }

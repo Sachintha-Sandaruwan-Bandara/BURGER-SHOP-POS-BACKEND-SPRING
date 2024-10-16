@@ -1,4 +1,4 @@
-package lk.ijse.burgershopposbackend.util;
+package lk.ijse.burgershopposbackend.service;
 /* 
     @author 
       
@@ -11,23 +11,20 @@ package lk.ijse.burgershopposbackend.util;
 \__ \    / _ \    | (__  | __ |  | |     \__ \     | _ \   / _ \   | .` |  | |) |   / _ \   |   /    / _ \   
 |___/   /_/ \_\    \___| |_||_| |___|    |___/     |___/  /_/ \_\  |_|\_|  |___/   /_/ \_\  |_|_\   /_/ \_\  
   
- @created 10/15/2024 - 3:32 PM 
+ @created 10/16/2024 - 2:52 PM 
 */
 
-import java.util.Base64;
-import java.util.UUID;
+import lk.ijse.burgershopposbackend.customObj.CustomerResponse;
+import lk.ijse.burgershopposbackend.customObj.ItemResponse;
+import lk.ijse.burgershopposbackend.dto.CustomerDTO;
+import lk.ijse.burgershopposbackend.dto.ItemDTO;
 
-public class AppUtil {
+import java.util.List;
 
-    public static String createCustomerId(){
-        return "CUSTOMER-"+UUID.randomUUID();
-    }
-    public static String createItemCode(){
-        return "ITEM-"+UUID.randomUUID();
-    }
-
-    public static String toBase64ProfilePic(byte [] profilePic){
-        return Base64.getEncoder().encodeToString(profilePic);
-    }
-
+public interface ItemService {
+    void saveItem(ItemDTO itemDTO);
+    void updateItem(ItemDTO itemDTO);
+    void deleteItem(String itemId);
+    ItemResponse getSelectedItem(String itemId);
+    List<ItemDTO> getAllItems();
 }

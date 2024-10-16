@@ -1,4 +1,4 @@
-package lk.ijse.burgershopposbackend.util;
+package lk.ijse.burgershopposbackend.exception;
 /* 
     @author 
       
@@ -11,23 +11,19 @@ package lk.ijse.burgershopposbackend.util;
 \__ \    / _ \    | (__  | __ |  | |     \__ \     | _ \   / _ \   | .` |  | |) |   / _ \   |   /    / _ \   
 |___/   /_/ \_\    \___| |_||_| |___|    |___/     |___/  /_/ \_\  |_|\_|  |___/   /_/ \_\  |_|_\   /_/ \_\  
   
- @created 10/15/2024 - 3:32 PM 
+ @created 10/16/2024 - 2:51 PM 
 */
 
-import java.util.Base64;
-import java.util.UUID;
-
-public class AppUtil {
-
-    public static String createCustomerId(){
-        return "CUSTOMER-"+UUID.randomUUID();
+public class ItemNotFoundException extends RuntimeException{
+    public ItemNotFoundException(){
+        super();
     }
-    public static String createItemCode(){
-        return "ITEM-"+UUID.randomUUID();
-    }
+    public ItemNotFoundException(String message){
 
-    public static String toBase64ProfilePic(byte [] profilePic){
-        return Base64.getEncoder().encodeToString(profilePic);
+        super(message);
     }
+    public ItemNotFoundException(String message, Throwable cause){
 
+        super(message,cause);
+    }
 }

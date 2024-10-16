@@ -15,8 +15,11 @@ package lk.ijse.burgershopposbackend.util;
 */
 
 import lk.ijse.burgershopposbackend.customObj.CustomerResponse;
+import lk.ijse.burgershopposbackend.customObj.ItemResponse;
 import lk.ijse.burgershopposbackend.dto.CustomerDTO;
+import lk.ijse.burgershopposbackend.dto.ItemDTO;
 import lk.ijse.burgershopposbackend.entity.CustomerEntity;
+import lk.ijse.burgershopposbackend.entity.ItemEntity;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +37,18 @@ public class Mapping {
         return modelMapper.map(customerDTO,CustomerEntity.class);
 
     }
-    public List<CustomerDTO> convertUserToDTOList(List<CustomerEntity> customerEntities) {
+    public List<CustomerDTO> convertCustomerToDTOList(List<CustomerEntity> customerEntities) {
         return modelMapper.map(customerEntities, List.class);
+    }
+
+    public ItemResponse convertToDTO(ItemEntity item){
+        return modelMapper.map(item, ItemDTO.class);
+    }
+    public ItemEntity convertToEntity(ItemDTO itemDTO){
+        return modelMapper.map(itemDTO,ItemEntity.class);
+
+    }
+    public List<ItemDTO> convertItemToDTOList(List<ItemEntity> itemEntities) {
+        return modelMapper.map(itemEntities, List.class);
     }
 }
