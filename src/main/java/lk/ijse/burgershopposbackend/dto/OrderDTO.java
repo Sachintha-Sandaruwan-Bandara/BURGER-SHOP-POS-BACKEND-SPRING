@@ -1,6 +1,6 @@
 package lk.ijse.burgershopposbackend.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 import lk.ijse.burgershopposbackend.customObj.OrderResponse;
 import lombok.AllArgsConstructor;

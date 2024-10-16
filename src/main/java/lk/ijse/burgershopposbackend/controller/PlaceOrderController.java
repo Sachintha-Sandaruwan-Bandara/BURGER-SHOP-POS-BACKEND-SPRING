@@ -24,7 +24,7 @@ public class PlaceOrderController {
     @Autowired
     private final PlaceOrderService placeOrderService;
 
-    private static final Logger logger = LoggerFactory.getLogger(PlaceOrder.class);
+    private static final Logger logger = LoggerFactory.getLogger(PlaceOrderController.class);
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Void> placeOrder(@RequestBody OrderDTO orderDTO) {
