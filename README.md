@@ -78,6 +78,6 @@ You can find detailed API documentation at the following link:
 This documentation provides information about each API endpoint, including request parameters and sample responses.
 
 ## License
-<a href="https://documenter.getpostman.com/view/34708061/2sAXxV6A19" target="_blank">MIT License</a>
+<a href="https://documenter.getpostman.com/view/34708061/2sAXxV6A19" target="_blank">MIT License</a> <br>
 © 2024 - Present | Sachintha Sandaruwan | All Rights Reserved
 
